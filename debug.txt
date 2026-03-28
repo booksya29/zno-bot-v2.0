@@ -1,0 +1,5 @@
+[Sat Mar 28 21:54:39 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/233 (233)
+[Sat Mar 28 21:55:01 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/1091 (1091)
+[Sat Mar 28 21:55:09 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/2531 (2531)
+[Sat Mar 28 22:00:36 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/1844 (1844)
+[Sat Mar 28 22:02:30 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/1352 (1352)

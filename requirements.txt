@@ -1,0 +1,7 @@
+aiogram
+python-dotenv
+beautifulsoup4
+requests
+pylatexenc
+lxml
+playwright
