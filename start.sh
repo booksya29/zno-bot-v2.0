@@ -1,8 +1,8 @@
 #!/bin/bash
-if [ ! -d "$HOME/.cache/ms-playwright/chromium-1208" ]; then
+if [ ! -d "$HOME/.cache/ms-playwright" ] || [ -z "$(ls -A $HOME/.cache/ms-playwright 2>/dev/null)" ]; then
     echo "Installing Playwright browsers..."
-    playwright install chromium
-    playwright install-deps chromium
+    python -m playwright install chromium
+    python -m playwright install-deps chromium
 else
     echo "Playwright browsers already installed, skipping..."
 fi
