@@ -3,3 +3,5 @@
 [Sat Mar 28 21:55:09 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/2531 (2531)
 [Sat Mar 28 22:00:36 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/1844 (1844)
 [Sat Mar 28 22:02:30 2026]: Користувач: аааа || Предмет: історія || Завдання: https://zno.osvita.ua/ukraine-history/all/1352 (1352)
+[Sat Mar 28 22:15:52 2026]: Користувач: аааа || Предмет: фізика || Завдання: https://zno.osvita.ua/physics/all/1093 (1093)
+[Sat Mar 28 22:16:31 2026]: Користувач: аааа || Предмет: фізика || Завдання: https://zno.osvita.ua/physics/all/1006 (1006)
