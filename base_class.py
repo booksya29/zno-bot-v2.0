@@ -85,8 +85,7 @@ class Father_task():
         obj.task_type = self.task_type
         obj.true_answer = self.true_answer
         obj.number_task = self.number_task
-        obj.photo_question = self.photo_question
-        obj.photo_answers = self.photo_answers
+        obj.photo_question = self.task_photo
         return obj
     
     
