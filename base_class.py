@@ -51,7 +51,7 @@ class Father_task():
         task_block = self.page.locator('div[class="task-card current"]')
         self.photo_answers = None
         if await task_block.locator('div[class="question"]').is_visible():
-            self.photo_question = await task_block.locator('div[class="question"]').screenshot()
+            self.photo_question = await task_block.locator('div[class="clear"]').screenshot()
         else:
             self.photo_question = None
         if await task_block.locator('div[class="answers"]').first.is_visible():
