@@ -85,11 +85,10 @@ class Father_task():
         obj.task_type = self.task_type
         obj.true_answer = self.true_answer
         obj.number_task = self.number_task
-        obj.photo_question = self.task_photo
+        obj.task_photo = self.task_photo
         return obj
     
     
     
     async def question_send(self, message: types.Message, builder):
-        if self.task_photo:
-            await message.answer_photo(photo=types.BufferedInputFile(file=self.task_photo, filename='task.png'), caption='Оберіть правильну віповідь!', reply_markup=builder.as_markup())
+        await message.answer_photo(photo=types.BufferedInputFile(file=self.task_photo, filename='task.png'), caption='Оберіть правильну віповідь!', reply_markup=builder.as_markup())
