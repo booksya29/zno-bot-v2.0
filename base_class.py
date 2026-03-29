@@ -49,20 +49,7 @@ class Father_task():
     async def get_task_photo(self):
         self.photo_answers = None
         task_block = self.page.locator('div[class="task-card current"]')
-        self.photo_answers = None
-        if await task_block.locator('div[class="question"]').is_visible():
-            try:
-                self.photo_question = await task_block.locator('div[class="clear"]').screenshot()
-            except:
-                self.photo_question = await task_block.locator('div[class="clear"]').first.screenshot()
-        else:
-            self.photo_question = None
-        if await task_block.locator('div[class="answers"]').first.is_visible():
-            photo_block_list = await task_block.locator('div[class="answers"]').all()
-            self.photo_answers = []
-            for block in photo_block_list:
-                photo = await block.screenshot()
-                self.photo_answers.append(photo)
+        self.task_photo = await task_block.locator('form[class="q-test"]').screenshot()
         await self.new_context.close()
 
     def get_task_info(self):
@@ -105,17 +92,5 @@ class Father_task():
     
     
     async def question_send(self, message: types.Message, builder):
-        if self.photo_question != None:
-            try:
-                await message.answer_photo(photo=types.BufferedInputFile(file=self.photo_question, filename='question.png'))
-            except Exception as e:
-                print(f"Failed to send question as photo: {e}")
-                await message.answer_document(document=types.BufferedInputFile(file=self.photo_question, filename='question.png'))
-        if self.photo_answers != None:
-            for photo_bytes in self.photo_answers:
-                try:
-                    await message.answer_photo(photo=types.BufferedInputFile(file=photo_bytes, filename='answer.png'))
-                except Exception as e:
-                    print(f"Failed to send answer as photo: {e}")
-                    await message.answer_document(document=types.BufferedInputFile(file=photo_bytes, filename='answer.png'))
-        await message.answer(text='Обери правильну відповідь!!!', reply_markup=builder.as_markup())
+        if self.task_photo:
+            await message.answer_photo(photo=types.BufferedInputFile(file=self.task_photo, filename='task.png'), caption='Оберіть правильну віповідь!', reply_markup=builder.as_markup())
